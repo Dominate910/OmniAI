@@ -1,4 +1,6 @@
 import streamlit as st
+import warnings
+warnings.filterwarnings('ignore')
 from groq import Groq
 import google.generativeai as genai
 from PIL import Image
@@ -19,6 +21,7 @@ import pandas as pd
 import subprocess
 import sys
 import re
+import replicate
 
 # ═══════════════════════════════════════════════════════
 # 🌐 OMNIAI ULTIMATE v8.0 — THE COMPLETE POWERHOUSE
