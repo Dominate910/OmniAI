@@ -24,22 +24,22 @@ import re
 import replicate
 
 # ═══════════════════════════════════════════════════════
-# 🌐 OMNIAI v9.0 — THE MONEY MAKING MACHINE
+# 🌐 CYAN 8 — THE MONEY MAKING MACHINE
 # 55MB | 45+ Features | 100+ Languages | FREE Forever
 # ═══════════════════════════════════════════════════════
 
 st.set_page_config(
-    page_title="OmniAI - Make Money With AI",
+    page_title="CYAN 8 - Make Money With AI",
     page_icon="💰",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
 
 # ═══════════════════════════════════════════════════════
-# LOGO & BRANDING
+# CYAN 8 LOGO & BRANDING
 # ═══════════════════════════════════════════════════════
 
-OMNI_LOGO = """
+CYAN_LOGO = """
 <div style="display:flex;align-items:center;gap:12px;padding:10px 20px;">
     <div style="position:relative;width:50px;height:50px;">
         <svg viewBox="0 0 100 100" style="width:50px;height:50px;">
@@ -62,8 +62,8 @@ OMNI_LOGO = """
                   fill="none" stroke="url(#logoGrad)" stroke-width="4" filter="url(#glow)"/>
             <path d="M25,50 C25,65 35,75 50,75 C65,75 75,65 75,50 C75,35 65,25 50,25 C35,25 25,35 25,50 Z" 
                   fill="none" stroke="url(#logoGrad)" stroke-width="4" filter="url(#glow)" opacity="0.6"/>
-            <text x="38" y="56" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" opacity="0.9">O</text>
-            <text x="54" y="56" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" opacity="0.9">I</text>
+            <text x="32" y="56" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" opacity="0.9">C</text>
+            <text x="48" y="56" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" opacity="0.9">8</text>
             <circle cx="50" cy="50" r="3" fill="#EC4899" filter="url(#glow)"/>
             <circle cx="35" cy="50" r="3" fill="#00E5FF" filter="url(#glow)"/>
             <circle cx="65" cy="50" r="3" fill="#6C5CE7" filter="url(#glow)"/>
@@ -72,7 +72,7 @@ OMNI_LOGO = """
         </svg>
     </div>
     <div>
-        <span style="font-size:24px;font-weight:800;background:linear-gradient(135deg,#6C5CE7,#00E5FF,#EC4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">OmniAI</span>
+        <span style="font-size:24px;font-weight:800;background:linear-gradient(135deg,#6C5CE7,#00E5FF,#EC4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">CYAN 8</span>
         <br><span style="font-size:10px;color:#888;letter-spacing:2px;">MAKE MONEY WITH AI</span>
     </div>
 </div>
@@ -156,7 +156,7 @@ st.markdown("""
         text-align: center;
         animation: moneyFloat 3s ease-in-out infinite;
     }
-    .omni-glow {
+    .cyan-glow {
         background: linear-gradient(135deg, #6C5CE7, #00E5FF, #EC4899);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -352,7 +352,7 @@ LANGUAGES = {
 # ═══════════════════════════════════════════════════════
 
 AI_MODES = {
-    "General": "You are OmniAI, a highly intelligent AI assistant. Answer ANY question with depth, accuracy, and clarity.",
+    "General": "You are CYAN 8, a highly intelligent AI assistant. Answer ANY question with depth, accuracy, and clarity.",
     "Study": "You are an expert teacher with deep knowledge across all subjects.",
     "Business": "You are a world-class business strategist. Give practical, actionable advice.",
     "Tech": "You are a senior software architect. Write clean, production-ready code.",
@@ -441,45 +441,6 @@ def generate_money_content(platform, template, topic, language="English"):
     prompt = prompts.get(platform, {}).get(template, f"Create content about: {topic}")
     return get_ai_response(prompt, "Money Maker", language)
 
-def calculate_potential_earnings(skill, platform):
-    """Calculate potential earnings for a skill on a platform"""
-    
-    earnings = {
-        "TikTok": {
-            "beginner": (100, 500),
-            "intermediate": (500, 2000),
-            "expert": (2000, 10000)
-        },
-        "YouTube": {
-            "beginner": (50, 300),
-            "intermediate": (300, 1000),
-            "expert": (1000, 5000)
-        },
-        "Instagram": {
-            "beginner": (50, 200),
-            "intermediate": (200, 800),
-            "expert": (800, 3000)
-        },
-        "Fiverr": {
-            "beginner": (100, 500),
-            "intermediate": (500, 2000),
-            "expert": (2000, 8000)
-        },
-        "Upwork": {
-            "beginner": (200, 800),
-            "intermediate": (800, 3000),
-            "expert": (3000, 15000)
-        },
-        "Freelance": {
-            "beginner": (100, 400),
-            "intermediate": (400, 1500),
-            "expert": (1500, 5000)
-        }
-    }
-    
-    data = earnings.get(platform, {})
-    return data
-
 # ═══════════════════════════════════════════════════════
 # VIRAL FEATURES
 # ═══════════════════════════════════════════════════════
@@ -499,7 +460,7 @@ ACHIEVEMENTS = [
     {"name": "Language Learner", "desc": "Use 10 different languages", "icon": "🌍", "points": 30},
     {"name": "Viral Star", "desc": "Share 10 times", "icon": "⭐", "points": 100},
     {"name": "AI Explorer", "desc": "Try all 8 AI modes", "icon": "🧭", "points": 40},
-    {"name": "Night Owl", "desc": "Use OmniAI after midnight", "icon": "🦉", "points": 20},
+    {"name": "Night Owl", "desc": "Use CYAN 8 after midnight", "icon": "🦉", "points": 20},
     {"name": "Money Maker", "desc": "Generate your first money-making content", "icon": "💰", "points": 50},
     {"name": "Earning Pro", "desc": "Create 10 money-making pieces of content", "icon": "💎", "points": 100},
 ]
@@ -509,15 +470,15 @@ ACHIEVEMENTS = [
 # ═══════════════════════════════════════════════════════
 
 TERMS_OF_SERVICE = """
-# 📋 Terms of Service for OmniAI
+# 📋 Terms of Service for CYAN 8
 
-**Last Updated:** January 2026
+**Last Updated:** July 2026
 
 ## 1. Acceptance of Terms
-By using OmniAI ("the App"), you agree to these Terms of Service ("Terms").
+By using CYAN 8 ("the App"), you agree to these Terms of Service ("Terms").
 
 ## 2. Description of Service
-OmniAI is an AI-powered assistant that provides:
+CYAN 8 is an AI-powered assistant that provides:
 - Conversational AI capabilities
 - Image generation and analysis
 - Memory storage (Memory Vault)
@@ -541,13 +502,13 @@ You agree NOT to:
 - You can request data deletion
 
 ## 6. Contact
-Email: support@omniai.com
+Email: support@cyan8.com
 """
 
 PRIVACY_POLICY = """
-# 🔒 Privacy Policy for OmniAI
+# 🔒 Privacy Policy for CYAN 8
 
-**Last Updated:** January 2026
+**Last Updated:** July 2026
 
 ## 1. Information We Collect
 - Account Information: Name, email
@@ -576,7 +537,7 @@ We share minimal data with:
 - Delete your data
 
 ## 6. Contact
-Privacy questions? Email: privacy@omniai.com
+Privacy questions? Email: privacy@cyan8.com
 """
 
 # ═══════════════════════════════════════════════════════
@@ -585,7 +546,7 @@ Privacy questions? Email: privacy@omniai.com
 
 HELP_ARTICLES = {
     "🚀 Getting Started": {
-        "How to use OmniAI": "Simply type your question or upload an image.",
+        "How to use CYAN 8": "Simply type your question or upload an image.",
         "AI Modes Explained": "Choose from 11 modes.",
         "Understanding Memory Vault": "Click 🧠 to save important information.",
         "Sign In Methods": "Use Google, Apple, or Email."
@@ -599,7 +560,7 @@ HELP_ARTICLES = {
     },
     "⭐ Features": {
         "45+ Unique Features": "From AI DNA to Money Maker.",
-        "Image Generation": "Describe any image and OmniAI will create it.",
+        "Image Generation": "Describe any image and CYAN 8 will create it.",
         "Image Analysis": "Upload images and ask questions.",
         "Offline Mode": "5 free offline questions per day.",
         "Voice Input": "Speak instead of typing (Premium)."
@@ -622,7 +583,7 @@ HELP_ARTICLES = {
 
 def init_database():
     try:
-        conn = sqlite3.connect("omniai.db")
+        conn = sqlite3.connect("cyan8.db")
         c = conn.cursor()
         c.execute('''CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -1007,7 +968,7 @@ def generate_image(prompt):
 # ═══════════════════════════════════════════════════════
 
 def money_maker_page():
-    st.markdown('<h1 class="omni-glow">💰 AI Money Maker</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="cyan-glow">💰 AI Money Maker</h1>', unsafe_allow_html=True)
     st.caption("Turn your skills into income with AI-powered tools")
     
     # Earnings Tracker
@@ -1142,8 +1103,8 @@ def money_maker_page():
         st.rerun()
 
 def viral_features_page():
-    st.markdown('<h1 class="omni-glow">🚀 Viral Features</h1>', unsafe_allow_html=True)
-    st.caption("Share, challenge, and grow with OmniAI")
+    st.markdown('<h1 class="cyan-glow">🚀 Viral Features</h1>', unsafe_allow_html=True)
+    st.caption("Share, challenge, and grow with CYAN 8")
     
     challenge = get_daily_challenge()
     st.markdown(f"""
@@ -1154,7 +1115,7 @@ def viral_features_page():
     </div>
     """, unsafe_allow_html=True)
     
-    st.markdown("### 📤 Share OmniAI")
+    st.markdown("### 📤 Share CYAN 8")
     c1, c2, c3, c4, c5 = st.columns(5)
     with c1:
         if st.button("🐦 Twitter", use_container_width=True):
@@ -1186,7 +1147,7 @@ def viral_features_page():
         st.rerun()
 
 def help_center_page():
-    st.markdown('<h1 class="omni-glow">❓ Help Center</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="cyan-glow">❓ Help Center</h1>', unsafe_allow_html=True)
     categories = list(HELP_ARTICLES.keys())
     selected_category = st.radio("📚 Categories", categories, horizontal=True)
     if selected_category:
@@ -1199,21 +1160,21 @@ def help_center_page():
         st.rerun()
 
 def terms_page():
-    st.markdown('<h1 class="omni-glow">📋 Terms of Service</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="cyan-glow">📋 Terms of Service</h1>', unsafe_allow_html=True)
     st.markdown(TERMS_OF_SERVICE)
     if st.button("⬅️ Back"):
         st.session_state.show_terms = False
         st.rerun()
 
 def privacy_page():
-    st.markdown('<h1 class="omni-glow">🔒 Privacy Policy</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="cyan-glow">🔒 Privacy Policy</h1>', unsafe_allow_html=True)
     st.markdown(PRIVACY_POLICY)
     if st.button("⬅️ Back"):
         st.session_state.show_privacy = False
         st.rerun()
 
 def search_page():
-    st.markdown('<h1 class="omni-glow">🔍 Live Search</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="cyan-glow">🔍 Live Search</h1>', unsafe_allow_html=True)
     query = st.text_input("What would you like to search for?")
     if query and st.button("🔍 Search", type="primary"):
         with st.spinner("Searching..."):
@@ -1225,7 +1186,7 @@ def search_page():
         st.rerun()
 
 def document_processing_page():
-    st.markdown('<h1 class="omni-glow">📄 Document Processing</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="cyan-glow">📄 Document Processing</h1>', unsafe_allow_html=True)
     uploaded_file = st.file_uploader("Choose a file", type=["pdf", "txt", "csv", "xlsx", "xls"])
     if uploaded_file:
         file_bytes = uploaded_file.read()
@@ -1245,7 +1206,7 @@ def document_processing_page():
         st.rerun()
 
 def agent_mode_page():
-    st.markdown('<h1 class="omni-glow">🤖 AI Agent Mode</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="cyan-glow">🤖 AI Agent Mode</h1>', unsafe_allow_html=True)
     task = st.text_area("What complex task would you like me to handle?")
     if task and st.button("🚀 Execute Task", type="primary"):
         with st.spinner("Agent working..."):
@@ -1257,7 +1218,7 @@ def agent_mode_page():
         st.rerun()
 
 def coaching_page():
-    st.markdown('<h1 class="omni-glow">💪 AI Coaching</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="cyan-glow">💪 AI Coaching</h1>', unsafe_allow_html=True)
     coach_types = ["Life Coach", "Career Coach", "Fitness Coach", "Study Coach", "Business Coach"]
     coach_type = st.selectbox("Choose your coach:", coach_types)
     question = st.text_area("What would you like coaching on?")
@@ -1271,14 +1232,14 @@ def coaching_page():
         st.rerun()
 
 def art_studio_page():
-    st.markdown('<h1 class="omni-glow">🎨 AI Art Studio</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="cyan-glow">🎨 AI Art Studio</h1>', unsafe_allow_html=True)
     prompt = st.text_area("Describe your image:")
     if prompt and st.button("🎨 Generate"):
         with st.spinner("Creating art..."):
             image_bytes = generate_image(prompt)
             if image_bytes:
                 st.image(image_bytes, caption=f"AI Art: {prompt}")
-                st.download_button("📥 Download", image_bytes, "omniai_art.png")
+                st.download_button("📥 Download", image_bytes, "cyan8_art.png")
             else:
                 st.warning("⚠️ Add REPLICATE_API_KEY to secrets.")
     if st.button("⬅️ Back"):
@@ -1286,7 +1247,7 @@ def art_studio_page():
         st.rerun()
 
 def sign_in_page():
-    st.markdown(OMNI_LOGO, unsafe_allow_html=True)
+    st.markdown(CYAN_LOGO, unsafe_allow_html=True)
     st.markdown('<p style="text-align:center;font-size:18px;color:#ccc;">Make Money With AI — Smarter Than Ever</p>', unsafe_allow_html=True)
     st.markdown('<p style="text-align:center;color:#888;">100+ Languages | 45+ Features | 55MB | Free Forever</p>', unsafe_allow_html=True)
     col1, col2, col3 = st.columns([1, 2, 1])
@@ -1319,10 +1280,10 @@ def sign_in_page():
 
 def sidebar():
     with st.sidebar:
-        st.markdown(OMNI_LOGO, unsafe_allow_html=True)
+        st.markdown(CYAN_LOGO, unsafe_allow_html=True)
         if st.session_state.signed_in:
             st.markdown(f"""
-            <div style="padding:10px;background:rgba(26,26,46,0.8);border-radius:10px;margin:10px 0;border:1px solid rgba(108,92,231,0.2);">
+            <div style="padding:10px;background:rgba(26,26,46,0.8);border-radius:10px;margin:10px 0;border:1px solid rgba(0,229,255,0.2);">
                 <strong style="color:#fff;">{st.session_state.user_name}</strong>
                 <br><small style="color:#888;">{st.session_state.user_email}</small>
             </div>
@@ -1389,9 +1350,9 @@ def sidebar():
         st.divider()
         if not st.session_state.is_premium:
             st.markdown("""
-            <div style="background:linear-gradient(135deg,#FFD700,#FFA500);border-radius:12px;padding:12px;text-align:center;animation:pulseGlow 2s infinite;">
-                <strong style="color:#000;">⭐ Unlock Premium</strong>
-                <br><small style="color:#000;">From $0.99/mo</small>
+            <div style="background:linear-gradient(135deg,#00E5FF,#6C5CE7);border-radius:12px;padding:12px;text-align:center;animation:pulseGlow 2s infinite;">
+                <strong style="color:#fff;">⭐ Unlock Premium</strong>
+                <br><small style="color:#fff;">From $0.99/mo</small>
             </div>
             """, unsafe_allow_html=True)
             if st.button("🚀 Upgrade Now", use_container_width=True, type="primary"):
@@ -1422,7 +1383,7 @@ elif st.session_state.show_art:
     art_studio_page()
 elif st.session_state.show_settings:
     sidebar()
-    st.markdown('<h1 class="omni-glow">⚙️ Settings</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="cyan-glow">⚙️ Settings</h1>', unsafe_allow_html=True)
     st.markdown(f"""
     <div class="glow-card">
         <h3>📊 System Info</h3>
@@ -1442,7 +1403,7 @@ elif st.session_state.show_settings:
         st.rerun()
 elif st.session_state.show_premium:
     sidebar()
-    st.markdown('<h1 class="omni-glow">⭐ Unlock Premium</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="cyan-glow">⭐ Unlock Premium</h1>', unsafe_allow_html=True)
     c1, c2, c3 = st.columns(3)
     with c1:
         st.markdown("""
@@ -1483,7 +1444,7 @@ elif st.session_state.show_premium:
         st.rerun()
 elif st.session_state.show_features:
     sidebar()
-    st.markdown('<h1 class="omni-glow">🌟 45+ Features</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="cyan-glow">🌟 45+ Features</h1>', unsafe_allow_html=True)
     st.caption("No other AI on Earth has this many features for free.")
     features = [
         {"icon": "🧬", "name": "AI DNA", "premium": True},
@@ -1520,7 +1481,7 @@ elif st.session_state.show_features:
         st.rerun()
 elif st.session_state.show_labs:
     sidebar()
-    st.markdown('<h1 class="omni-glow">🧪 OmniAI Labs</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="cyan-glow">🧪 CYAN 8 Labs</h1>', unsafe_allow_html=True)
     labs = [
         {"icon": "📡", "name": "Offline AI", "status": "Beta"},
         {"icon": "🎨", "name": "AI Art Generator", "status": "Beta"},
@@ -1536,14 +1497,14 @@ elif st.session_state.show_labs:
         st.rerun()
 elif st.session_state.show_image_gen:
     sidebar()
-    st.markdown('<h1 class="omni-glow">🎨 AI Art Generator</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="cyan-glow">🎨 AI Art Generator</h1>', unsafe_allow_html=True)
     prompt = st.text_area("Describe the image:")
     if prompt and st.button("🎨 Generate", type="primary"):
         with st.spinner("Creating..."):
             image_bytes = generate_image(prompt)
             if image_bytes:
                 st.image(image_bytes, caption=f"AI Generated: {prompt}")
-                st.download_button("📥 Download", image_bytes, "omniai_art.png")
+                st.download_button("📥 Download", image_bytes, "cyan8_art.png")
             else:
                 st.warning("⚠️ Add REPLICATE_API_KEY to secrets.")
     if st.button("⬅️ Back"):
@@ -1575,8 +1536,8 @@ else:
         st.markdown(f"""
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
             <h3 style="color:#fff;">{chat.get('title', 'New Chat')}</h3>
-            <span style="font-size:11px;color:#888;background:rgba(108,92,231,0.2);padding:4px 14px;border-radius:12px;">🌍 {st.session_state.language}</span>
-            <span style="font-size:11px;color:#888;background:rgba(108,92,231,0.2);padding:4px 14px;border-radius:12px;">🎯 {chat.get('mode', 'General')}</span>
+            <span style="font-size:11px;color:#888;background:rgba(0,229,255,0.2);padding:4px 14px;border-radius:12px;">🌍 {st.session_state.language}</span>
+            <span style="font-size:11px;color:#888;background:rgba(0,229,255,0.2);padding:4px 14px;border-radius:12px;">🎯 {chat.get('mode', 'General')}</span>
         </div>
         """, unsafe_allow_html=True)
         for msg in chat["messages"]:
@@ -1603,7 +1564,7 @@ else:
 
 st.divider()
 c1, c2, c3, c4, c5, c6 = st.columns(6)
-with c1: st.caption("🌐 v9.0 Money Machine")
+with c1: st.caption("🌐 CYAN 8")
 with c2: st.caption(f"🗣️ {st.session_state.language}")
 with c3: st.caption(f"👥 {st.session_state.total_users}")
 with c4: st.caption("💰 45+ Features")
